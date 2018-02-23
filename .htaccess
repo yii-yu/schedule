@@ -1,0 +1,57 @@
+#<IfModule mod_autoindex.c>
+#   #Запрещает просмотр содержимого папок
+#    Options -Indexes
+#</IfModule>     
+#
+# # Запретить доступ к файлам, начинающимся с точки
+#
+#RewriteRule (^\.|/\.) - [F]
+#<IfModule mod_rewrite.c>
+#RewriteEngine on
+#RewriteCond %{REQUEST_URI} !^public
+#RewriteRule ^(.*)$ frontend/web/$1 [L]  
+#RewriteRule . index.php
+#</IfModule>
+#
+# # Запретить доступ к расширениям нижнего уровня
+#
+#<Files ~ "(.json|.lock|.git)">
+#Order allow,deny
+#Deny from all
+#</Files>
+
+<IfModule mod_rewrite.c>
+    Options +FollowSymlinks
+    RewriteEngine On
+</IfModule>
+ 
+<IfModule mod_rewrite.c>
+    # deal with admin first
+    RewriteCond %{REQUEST_URI} ^/(admin)
+    RewriteRule ^admin/assets/(.*)$ backend/web/assets/$1 [L]
+    RewriteRule ^admin/css/(.*)$ backend/web/css/$1 [L]
+    RewriteRule ^admin/img/(.*)$ backend/web/img/$1 [L]
+    RewriteRule ^admin/js/(.*)$ backend/web/js/$1 [L]
+
+    RewriteCond %{REQUEST_URI} !^/backend/web/(assets|css|img|js)/
+    RewriteCond %{REQUEST_URI} ^/(admin)
+    RewriteRule ^.*$ backend/web/index.php [L]
+
+    RewriteCond %{REQUEST_URI} ^/(assets|css|img|storage|fonts|js|theme)
+    RewriteRule ^assets/(.*)$ frontend/web/assets/$1 [L]
+    RewriteRule ^css/(.*)$ frontend/web/css/$1 [L]
+    RewriteRule ^images/(.*)$ frontend/web/images/$1 [L]
+    RewriteRule ^storage/(.*)$ frontend/web/storage/$1 [L]
+    RewriteRule ^fonts/(.*)$ frontend/web/fonts/$1 [L]
+    RewriteRule ^js/(.*)$ frontend/web/js/$1 [L]
+    RewriteRule ^theme/(.*)$ frontend/web/theme/$1 [L]    
+    RewriteRule ^favicon.ico$ frontend/web/favicon.ico [L]
+    RewriteRule ^(.*)$ frontend/web/$1 [L]
+
+    RewriteCond %{REQUEST_URI} !^/(frontend|backend)/web/(assets|css|js)/
+    RewriteCond %{REQUEST_URI} !index.php
+    RewriteCond %{REQUEST_FILENAME} !-f [OR]
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^.*$ frontend/web/index.php
+
+</IfModule>

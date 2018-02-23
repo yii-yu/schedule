@@ -1,0 +1,409 @@
+html,
+body {
+    height: 100%;
+    overflow: scroll!important;
+}
+
+.wrap {
+    min-height: 100%;
+    height: auto;
+    margin: 0 auto -60px;
+    padding: 0 0 60px;
+}
+
+.wrap > .container {
+    padding: 70px 15px 20px;
+}
+
+.footer {
+    height: 60px;
+    background-color: #f5f5f5;
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+}
+
+.jumbotron {
+    text-align: center;
+    background-color: transparent;
+}
+
+.jumbotron .btn {
+    font-size: 21px;
+    padding: 14px 24px;
+}
+
+.not-set {
+    color: #c55;
+    font-style: italic;
+}
+
+/* add sorting icons to gridview sort links */
+a.asc:after, a.desc:after {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    padding-left: 5px;
+}
+
+a.asc:after {
+    content: "\e151";
+}
+
+a.desc:after {
+    content: "\e152";
+}
+
+.sort-numerical a.asc:after {
+    content: "\e153";
+}
+
+.sort-numerical a.desc:after {
+    content: "\e154";
+}
+
+.sort-ordinal a.asc:after {
+    content: "\e155";
+}
+
+.sort-ordinal a.desc:after {
+    content: "\e156";
+}
+
+.grid-view td {
+    white-space: nowrap;
+}
+
+.grid-view .filters input,
+.grid-view .filters select {
+    min-width: 50px;
+}
+
+.hint-block {
+    display: block;
+    margin-top: 5px;
+    color: #999;
+}
+
+.error-summary {
+    color: #a94442;
+    background: #fdf7f7;
+    border-left: 3px solid #eed3d7;
+    padding: 10px 20px;
+    margin: 0 0 15px 0;
+}
+
+/* align the logout "link" (button in form) of the navbar */
+.nav li > form > button.logout {
+    padding: 15px;
+    border: none;
+}
+
+@media(max-width:767px) {
+    .nav li > form > button.logout {
+        display:block;
+        text-align: left;
+        width: 100%;
+        padding: 10px 15px;
+    }
+}
+
+.nav > li > form > button.logout:focus,
+.nav > li > form > button.logout:hover {
+    text-decoration: none;
+}
+
+.nav > li > form > button.logout:focus {
+    outline: none;
+}
+#user-type label{
+    font-weight: normal;
+    display:block;
+} 
+
+.tabbable .tab-content{
+    margin-top: 30px;
+    margin-left: 20px;
+    width: calc(100% - 140px);
+    float: left;
+    padding: 10px;
+}
+
+
+.tabs-below > .nav-tabs,
+.tabs-right > .nav-tabs,
+.tabs-left > .nav-tabs {
+    border-bottom: 0;
+}
+
+.tab-content > .tab-pane,
+.pill-content > .pill-pane {
+    display: none;
+}
+
+.tab-content > .active,
+.pill-content > .active {
+    display: block;
+
+}
+.tab-content-block{
+    border-top:1px solid#ddd;
+    /*margin-left: 40px;*/
+    height: 20px;
+    /*    position: relative;
+        top: 1px;*/
+}
+
+.tabs-below > .nav-tabs {
+    border-top: 1px solid #ddd;
+}
+
+.tabs-below > .nav-tabs > li {
+    margin-top: -1px;
+    margin-bottom: 0;
+}
+
+.tabs-below > .nav-tabs > li > a {
+    -webkit-border-radius: 0 0 4px 4px;
+    -moz-border-radius: 0 0 4px 4px;
+    border-radius: 0 0 4px 4px;
+}
+
+.tabs-below > .nav-tabs > li > a:hover,
+.tabs-below > .nav-tabs > li > a:focus {
+    border-top-color: #ddd;
+    border-bottom-color: transparent;
+}
+
+.tabs-below > .nav-tabs > .active > a,
+.tabs-below > .nav-tabs > .active > a:hover,
+.tabs-below > .nav-tabs > .active > a:focus {
+    border-color: transparent #ddd #ddd #ddd;
+}
+
+.tabs-left > .nav-tabs > li,
+.tabs-right > .nav-tabs > li {
+    float: none;
+    border-top:1px solid#fff;
+}
+
+.tabs-left > .nav-tabs > li > a,
+.tabs-right > .nav-tabs > li > a {
+    min-width: 74px;
+    margin-right: 0;
+    margin-bottom: 3px;
+    height: 85px;
+    font-size: 16px;
+    text-align: center;
+     padding-top: 20px;
+}
+
+.tabs-left > .nav-tabs {    
+    min-width:110px;
+    max-width:10%;
+    float: left;
+    min-height: 320px;
+    /*margin-right: 19px;*/
+    border-right: 1px solid #ddd;
+}
+
+.tabs-left > .nav-tabs > li > a {
+    margin-right: -1px;
+    -webkit-border-radius: 4px 0 0 4px;
+    -moz-border-radius: 4px 0 0 4px;
+    border-radius: 4px 0 0 4px;
+}
+
+.tabs-left > .nav-tabs > li > a:hover,
+.tabs-left > .nav-tabs > li > a:focus {
+    border-color: #eeeeee #dddddd #eeeeee #eeeeee;
+}
+
+.tabs-left > .nav-tabs .active > a,
+.tabs-left > .nav-tabs .active > a:hover,
+.tabs-left > .nav-tabs .active > a:focus {    
+    border-color: #ddd transparent #ddd #ddd;
+    border-left: 3px solid#aa1819;
+    color: #aa1819;
+    height: 85px;
+    font-size: 16px;
+    text-align: center;
+    padding-top: 20px;
+}
+.tabs-left > .nav-tabs .active > a div{
+
+}
+
+.tabs-right > .nav-tabs {
+    float: right;
+    margin-left: 19px;
+    border-left: 1px solid #ddd;
+}
+
+.tabs-right > .nav-tabs > li > a {
+    margin-left: -1px;
+    -webkit-border-radius: 0 4px 4px 0;
+    -moz-border-radius: 0 4px 4px 0;
+    border-radius: 0 4px 4px 0;
+}
+
+.tabs-right > .nav-tabs > li > a:hover,
+.tabs-right > .nav-tabs > li > a:focus {
+    border-color: #eeeeee #eeeeee #eeeeee #dddddd;
+}
+
+.tabs-right > .nav-tabs .active > a,
+.tabs-right > .nav-tabs .active > a:hover,
+.tabs-right > .nav-tabs .active > a:focus {
+    border-color: #ddd #ddd #ddd transparent;
+    *border-left-color: #ffffff;
+}
+
+/*************************************
+** Calendar
+*/
+
+.yuyu-calendar{
+    /*width: 150px;*/
+    font-size: 14px;
+    /* height: 30px; */
+
+}
+.yuyu-calendar-container{
+    position: absolute;
+    min-width: 220px;
+    max-width: 300px;
+    height: auto;
+    overflow: hidden;
+    max-height: 0px;
+    transition: all .3s ease-in-out;
+    z-index: 10000;
+}
+
+.yuyu-calendar-container table{
+    width: 100%;
+    text-align: center;
+    background: #ffffff;
+}
+.yuyu-calendar-container table td{
+    border-left-style: solid;
+    border-left-color: #009688;
+    border-left-width: 1px;   
+    border-bottom-style: solid;
+    border-bottom-color: #009688;
+    border-bottom-width: 1px;
+
+}
+.yuyu-calendar-container table tr td:last-child{
+    border-right-style: solid;
+    border-right-color: #009688;
+    border-right-width: 1px;   
+}
+.yuyu-calendar-container table tr:last-child td:first-child{
+    border-bottom-left-radius: 5px;
+}
+.yuyu-calendar-container table tr:last-child td:last-child{
+    border-bottom-right-radius: 5px;
+}
+.yuyu-calendar-container table th{
+    background-color: #999;
+    color: #fff;
+}
+
+.yuyu-calendar-header{
+    height: 40px;
+    width: 100%;
+    background-color: #009688;
+    border-radius: 5px;
+}
+.yuyu-header-title{
+    min-width: 120px;
+    width: 60%;
+    height: 40px;
+    line-height: 40px;
+    background-color: #009688;
+    color: #fff;
+    float: left;
+    text-align: center;
+    font-size: 12px;
+
+}
+.yuyu-svg-btn{
+    min-width: 20px;
+    width: 10%;
+    height: 40px;
+    line-height: 40px;
+    float: left;
+    display: block;
+    stroke-width: 1;
+    stroke: #ffffff;
+    stroke-miterlimit: 10;
+    cursor: pointer;
+    /* border: 2px solid#009688; */
+    border-radius: 5px;
+    /* background-color: #ffffff; */
+
+
+
+    /* box-shadow: inset 0px 0px 2px #ffffff; */
+}
+.yuyu-svg-btn>path{
+    transform-origin: 50% 50%;
+    /* animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.2s forwards; */
+}
+.yuyu-svg-btn>.path-month{
+    stroke-width: 1;
+    /*   stroke-dasharray: 1;
+    stroke-dashoffset: 10; */
+}
+.yuyu-svg-btn>.path-year{
+    /*   stroke-dasharray: 20;
+    stroke-dashoffset: 20; */
+}
+.yuyu-svg-btn:hover{
+    stroke: #ffffff;
+    opacity: 0.5;
+}
+
+.yuyu-svg-btn>circle{
+    fill: #009688;   
+} 
+.yuyu-days-next-month{
+    color: #ccc;
+}
+.yuyu-calendar-day{
+    cursor: pointer;
+    padding: 3px 0px;
+}
+.yuyu-calendar-day:hover{
+    color: #ff0000;    
+}
+.yuyu-calendar-select-day{   
+    background-color: #ff0000;
+    color: #ffffff;
+    opacity: 0.5;
+    border-radius: 5px;
+}
+.yuyu-calendar-true-day{   
+    background-color: green;
+    color: #ffffff;
+    opacity: 0.5;
+    border-radius: 5px;
+}
+
+
+/** 
+ * Calendar
+ ******************************/
+
+
+
+.icon-calendar{
+    color: #009688;
+    position: absolute;
+    right: 25px;
+    top: 18px;
+}
